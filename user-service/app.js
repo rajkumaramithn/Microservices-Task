@@ -17,3 +17,7 @@ app.get('/users', (req, res) => {
 app.listen(port, () => {
   console.log(`User service running on port ${port}`);
 });
+
+app.get('/', (req, res) => {
+  res.send('User Service is running');
+});

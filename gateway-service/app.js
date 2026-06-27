@@ -4,6 +4,7 @@ const app = express();
 app.use(express.json());
 const port = 3003;
 
+
 app.get('/health', (req, res) => {
   res.json({ status: 'Gateway Service is healthy' });
 });
@@ -46,4 +47,8 @@ app.post('/api/orders', async (req, res) => {
 
 app.listen(port, () => {
   console.log(`Gateway service running on port ${port}`);
+});
+
+app.get('/', (req, res) => {
+  res.send('Gateway Service is running');
 });
